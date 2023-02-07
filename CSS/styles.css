@@ -1,53 +1,97 @@
 :root {
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  background-color: #ffc3a1;
+  background-color: #b08267;
 }
+
+/* ------------------------ Element styling ------------------------ */
 
 body {
   margin: 0px;
 }
 
-table,
-td,
-th {
-  border: 1px solid black;
+a {
+  color: black;
 }
 
 h1 {
-  color: #a75d5d;
+  color: #522222;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
 }
 
-.headerText {
-  font-size: 50px;
-  color: black;
-  position: relative;
-  top: 10%;
+h2 {
+  font-size: 16px;
 }
 
 h3 {
   color: #a75d5d;
+  font-family: lu;
 }
 
 hr {
   border-style: none;
   border-top-style: dotted;
-  border-color: grey;
+  border-color: rgb(121, 83, 0);
   border-width: 5px;
   width: 10%;
 }
 
+iframe {
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
+table {
+  width: 700px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: #b08267;
+}
+
+td {
+  background-color: #f0eddc;
+  padding: 5px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+/* ------------------------ Class styling ------------------------ */
+
+.headerText {
+  font-family: "Lucida Handwriting", cursive;
+  font-size: 70px;
+  color: rgb(230, 115, 0);
+  position: relative;
+  top: -10%;
+  text-shadow: 0px 0px 10px black;
+}
+
 .rounded-img {
-  border-radius: 10%;
+  border-radius: 50px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
+  width: 450px;
+  border-style: solid;
+  border-color: rgb(121, 83, 0);
 }
 
-/* ---------- Grid layout ---------- */
+/* ------------------------ Main grid layout ------------------------ */
 
 .header {
   grid-area: header;
+}
+
+.menu {
+  grid-area: menu;
 }
 .article {
   grid-area: article;
@@ -65,36 +109,66 @@ hr {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-rows: 150px 80% 80px;
+  grid-template-rows: 150px auto 80px;
   grid-template-areas:
-    "header header header"
+    "asideLeft header asideRight"
     "asideLeft article asideRight"
-    "footer footer footer";
+    "asideLeft footer asideRight";
 }
+
+/* ------------------------ Grid styling ------------------------ */
+
+.side-right {
+  grid-area: right;
+}
+
+.side-left {
+  grid-area: left;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-areas: "left right";
+}
+
+/* ------------------------ Grid styling ------------------------ */
 
 .header {
   text-align: center;
-  background-color: #ceab93;
-}
-
-.aside-left {
-  background-color: #ad8b73;
-}
-
-.aside-right {
-  background-color: #ad8b73;
+  min-width: 700px;
+  max-width: 1000px;
+  background-image: url("/images/foodBanner.jpg");
+  background-position: 0px -300px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .article {
   background-color: #fffbe9;
   min-width: 700px;
-  padding-left: 30px;
-  padding-right: 30px;
+  max-width: 1000px;
   padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
 }
 
 .footer {
   text-align: center;
   background-color: #ceab93;
+  min-width: 700px;
+  max-width: 1000px;
   margin-bottom: 0px;
+  padding-top: 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  font-style: italic;
+}
+
+.borderStyle {
+  border-color: rgb(121, 83, 0);
+  border-style: solid;
+  padding-left: 50px;
+  padding-right: 50px;
 }
