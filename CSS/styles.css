@@ -1,6 +1,9 @@
 :root {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   background-color: #b08267;
+  background-image: url("/images/background.jpg");
+  background-size: 70%;
+  
 }
 
 /* ------------------------ Element styling ------------------------ */
@@ -63,15 +66,17 @@ ul {
   list-style-type: circle;
 }
 
+
 /* ------------------------ Class styling ------------------------ */
 
 .headerText {
   font-family: "Lucida Handwriting", cursive;
   font-size: 70px;
-  color: rgb(230, 115, 0);
+  color: rgb(251, 180, 88);
   position: relative;
   top: -10%;
   text-shadow: 0px 0px 10px black;
+  
 }
 
 .rounded-img {
@@ -142,6 +147,7 @@ ul {
   background-position: 0px -300px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  
 }
 
 .article {
@@ -167,7 +173,7 @@ ul {
 }
 
 .borderStyle {
-  border-color: rgb(121, 83, 0);
+  border-color: black;
   border-style: solid;
   padding-left: 50px;
   padding-right: 50px;
