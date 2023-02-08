@@ -144,7 +144,7 @@ ul {
   text-align: center;
   min-width: 700px;
   max-width: 1000px;
-  background-image: url("/images/foodBanner.jpg");
+  background-image: url("./images/foodBanner.jpg");
   background-position: 0px -300px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
