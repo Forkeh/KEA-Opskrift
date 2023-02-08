@@ -1,7 +1,7 @@
 :root {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   background-color: #b08267;
-  background-image: url("/images/background.jpg");
+  background-image: url("../images/background.jpg");
   background-size: 800px;
 }
 
