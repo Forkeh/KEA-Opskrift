@@ -1,5 +1,5 @@
 :root {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Scope One", serif;
   background-color: #b08267;
   background-image: url("../images/background.jpg");
   background-size: 800px;
@@ -13,22 +13,32 @@ body {
 
 a {
   color: black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.soMe-list a:hover {
+  color: #f0eddc;
+  text-decoration: none;
+  transform: scale(330%);
+  transition: 0.5s;
 }
 
 h1 {
   color: #522222;
   font-size: 40px;
   text-align: center;
-  font-family: "Lucida Handwriting", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 
 h2 {
-  font-size: 16px;
+  font-family: "Trirong", serif;
+  font-size: 17px;
+  text-align: center;
 }
 
 h3 {
   color: #a75d5d;
-  font-family: lu;
+  font-family: "Trirong", serif;
 }
 
 hr {
@@ -48,12 +58,17 @@ iframe {
 
 table {
   width: 700px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Scope One", serif;
   font-size: 15px;
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
   border-color: #b08267;
+}
+
+th {
+  background-color: #d8d5c5;
+  font-weight: 800;
 }
 
 td {
@@ -74,7 +89,7 @@ ul {
   color: rgb(251, 180, 88);
   position: relative;
   top: -10%;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 5px black;
 }
 
 .center-image {
@@ -115,14 +130,14 @@ ul {
 .grid-container {
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
-  grid-template-rows: 150px auto 80px;
+  grid-template-rows: 150px auto 100px;
   grid-template-areas:
     "asideLeft header asideRight"
     "asideLeft article asideRight"
     "asideLeft footer asideRight";
 }
 
-/* ------------------------ Grid styling ------------------------ */
+/* ------------------------ Grid ingredients and recipe ------------------------ */
 
 .side-right {
   grid-area: right;
@@ -136,6 +151,14 @@ ul {
   display: grid;
   grid-template-columns: 2;
   grid-template-areas: "left right";
+}
+
+.soMe-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 10px;
+  padding: 20px;
 }
 
 /* ------------------------ Grid styling ------------------------ */
@@ -170,6 +193,14 @@ ul {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   font-style: italic;
+}
+
+.soMe {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 2.5em 2.5em 2.5em 2.5em;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
 .borderStyle {
