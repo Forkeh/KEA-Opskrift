@@ -176,6 +176,8 @@ ul {
 
 .article {
   background-color: #fffbe9;
+  background: linear-gradient(to top, #fbeebf, #fffbe9);
+
   min-width: 700px;
   max-width: 1000px;
   padding-bottom: 30px;
@@ -186,7 +188,7 @@ ul {
 
 .footer {
   text-align: center;
-  background-color: #ceab93;
+  background: linear-gradient(to top, #a67c5e, #936e54);
   min-width: 700px;
   max-width: 1000px;
   margin-bottom: 0px;
