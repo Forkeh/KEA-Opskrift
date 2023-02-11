@@ -16,6 +16,7 @@ a {
   text-decoration: none;
   transition: 0.5s;
   display: inline-block;
+  font-weight: bold;
 }
 .soMe-list a:hover {
   color: #f0eddc;
@@ -23,6 +24,14 @@ a {
   transform: scale(130%);
   transition: 0.5s;
   display: inline-block;
+}
+
+.menu a:hover {
+  color: #f0eddc;
+  display: inline-block;
+  transition: 0.1s;
+  font-weight: bold;
+  transform: scale(120%);
 }
 
 h1 {
@@ -59,7 +68,7 @@ iframe {
 }
 
 table {
-  width: 700px;
+  width: 90%;
   font-family: "Scope One", serif;
   font-size: 15px;
   margin-left: auto;
@@ -81,6 +90,13 @@ td {
 
 ul {
   list-style-type: circle;
+}
+
+button {
+  background-color: none;
+  border-radius: 15px;
+  padding: 8px;
+  border: none;
 }
 
 /* ------------------------ Class styling ------------------------ */
@@ -110,31 +126,21 @@ ul {
 
 /* ------------------------ Main grid layout ------------------------ */
 
-.header {
-  grid-area: header;
-}
-.menu {
-  grid-area: menu;
-}
-.article {
-  grid-area: article;
-}
 .aside-left {
   grid-area: asideLeft;
 }
+
 .aside-right {
   grid-area: asideRight;
-}
-.footer {
-  grid-area: footer;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
-  grid-template-rows: 150px auto 100px;
+  grid-template-rows: 150px 60px auto 100px;
   grid-template-areas:
     "asideLeft header asideRight"
+    "asideLeft menu asideRight"
     "asideLeft article asideRight"
     "asideLeft footer asideRight";
 }
@@ -165,32 +171,59 @@ ul {
 /* ------------------------ Grid styling ------------------------ */
 
 .header {
+  grid-area: header;
   text-align: center;
-  min-width: 700px;
-  max-width: 1000px;
+  /* min-width: 700px;
+  max-width: 1000px; */
   background-image: url("../images/foodBanner.jpg");
   background-position: 0px -300px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
+.menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  background: radial-gradient(
+    circle,
+    rgba(205, 155, 119, 0.85),
+    rgba(135, 100, 73, 0.85)
+  );
+  /* min-width: 700px;
+  max-width: 1000px; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 30px;
+}
+
 .article {
+  grid-area: article;
+
   background-color: #fffbe9;
   background: linear-gradient(to top, #fbeebf, #fffbe9);
 
   min-width: 700px;
   max-width: 1000px;
   padding-bottom: 30px;
-  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 50px;
 }
 
 .footer {
+  grid-area: footer;
+
   text-align: center;
-  background: linear-gradient(to top, #a67c5e, #936e54);
-  min-width: 700px;
-  max-width: 1000px;
+  background: linear-gradient(
+    to top,
+    rgba(107, 79, 58, 0.85),
+    rgb(147, 110, 84, 0.85)
+  );
+  /* min-width: 700px;
+  max-width: 1000px; */
   margin-bottom: 0px;
   padding-top: 20px;
   border-top-left-radius: 50px;
@@ -199,16 +232,14 @@ ul {
 }
 
 .soMe {
-  display: grid;
-  column-gap: 20px;
-  grid-template-columns: 2.5em 2.5em 2.5em 2.5em;
+  display: flex;
+  gap: 15px;
   margin-bottom: 10px;
   justify-content: center;
 }
 
 .borderStyle {
-  border-color: black;
-  border-style: solid;
+  border: 2px solid rgb(36, 18, 0);
   padding-left: 50px;
   padding-right: 50px;
 }
