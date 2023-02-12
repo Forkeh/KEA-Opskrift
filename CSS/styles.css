@@ -207,7 +207,7 @@ button {
   background: linear-gradient(to top, #fbeebf, #fffbe9);
 
   min-width: 700px;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   padding-bottom: 30px;
   margin-bottom: 10px;
   border-radius: 50px;
